@@ -9,11 +9,28 @@
     <link rel="stylesheet" href="./styles.css" />
     <link
       rel="stylesheet"
+      href="https://unpkg.com/tippy.js@6/themes/light.css" />
+    <link
+      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
     <!-- Page title -->
-    <title>Tui Café - Gallery</title>
+    <title>Tui Café - Home</title>
   </head>
   <body>
+    <!-- Implements audio to the homepage -->
+    <audio autoplay id="myAudio">
+      <source
+        src="audio/tui-birdsong-new-zealand-31660.mp3"
+        type="audio/mpeg" />
+    </audio>
+
+    <script>
+      // reference to the audio element
+      var audio = document.getElementById("myAudio");
+
+      // Sets the volume
+      audio.volume = 0.1;
+    </script>
     <header class="header">
       <!-- Header container with navigation and logo -->
       <div class="container row">
@@ -23,11 +40,21 @@
           </div>
           <!-- Navigation links -->
           <ul class="nav-links">
-            <li><a class="nav-item" href="./homepage.html">Home</a></li>
-            <li><a class="nav-item" href="./about.html">About</a></li>
-            <li><a class="nav-item" href="./cafes.html">Cafes</a></li>
-            <li><a class="nav-item" href="./menu.html">Menu</a></li>
-            <li><a class="nav-item" href="#">Gallery</a></li>
+            <li>
+              <a class="nav-item" href="#">Home</a>
+            </li>
+            <li>
+              <a class="nav-item" href="./about.html">About</a>
+            </li>
+            <li>
+              <a class="nav-item" href="./cafes.html">Cafes</a>
+            </li>
+            <li>
+              <a  class="nav-item" href="./menu.html">Menu</a>
+            </li>
+            <li>
+              <a class="nav-item" href="./gallery.html">Gallery</a>
+            </li>
           </ul>
           <!-- Burger menu icon for mobile -->
           <div class="burger">
@@ -40,50 +67,30 @@
     </header>
     <section>
       <!-- Main title section -->
-      <h1 class="main-title">Gallery</h1>
-      <p class="main-sub-title">whare whakairi toi</p>
-      <div class="slide-container">
-        <!-- Slider main container -->
-        <div class="swiper">
-          <!-- Additional required wrapper -->
-          <div class="swiper-wrapper">
-            <!-- Slides -->
-            <div class="swiper-slide">
-              <img src="img/pexels-brett-jordan-2297961.jpg" alt="breakfast meal" title="eggs and benidict"/>
-            </div>
-            <div class="swiper-slide">
-              <img src="img/greenhill.jpg" alt="green hill with sheep" title="green hill"/>
-            </div>
-            <div class="swiper-slide">
-              <img src="img/pexels-josiah-farrow-3686883.jpg" alt="waterfall in the forest" title="waterfall"/>
-            </div>
-            <div class="swiper-slide">
-              <img src="img/pexels-viktoria-alipatova-2074122.jpg" alt="coffee and cookies" title="coffee & cookies"/>
-            </div>
-            <div class="swiper-slide">
-              <img src="img/pexels-alex-favali-921374.jpg" alt="seashell meal" title="seashell dish"/>
-            </div>
-          </div>
-          <!-- use of pagination -->
-          <div class="swiper-pagination"></div>
-
-          <!-- navigation buttons -->
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-        </div>
+      <div class="container row mobile">
+        <h1 class="main-title">Welcome to Coffee Break</h1>
+        <p class="main-sub-title">Nau mai ki te coffee break</p>
+        <p class="main-title-message">
+          ultimate guide to local cafes, offering a diverse range of brews and prices tailored to your preferences. Say goodbye to endless searching and hello to tasteful sips, every time.
+        </p>
       </div>
-      <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+      <div class="main-image mobile">
+        <img
+          src="img/social media icon website.png"
+          alt="closed coffee shop"
+          title="coffee shop" />
+      </div>
     </section>
     <!-- footer section -->
     <footer class="footer">
       <div class="grid-container">
         <div class="col-1">
           <h3 class="footer-title">LINKS</h3>
-          <a href="./index.html">Home</a>
+          <a href="#">Home</a>
           <a href="./about.html">About Us</a>
           <a href="./contact.html">Contact Us</a>
           <a href="./menu.html">Menu</a>
-          <a href="#">Gallery</a>
+          <a href="./gallery.html">Gallery</a>
         </div>
         <div class="col-2">
           <!-- Social media links and motto -->
@@ -123,9 +130,11 @@
         </p>
       </div>
     </footer>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
     <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <script defer src="./main.js"></script>
   </body>
 </html>

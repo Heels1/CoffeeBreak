@@ -150,6 +150,7 @@ to an X */
   margin: 0 auto;
   margin-bottom: 70px;
   border-radius: 10px;
+  block-size: 35cap;
 }
 
 .footer {
@@ -603,7 +604,7 @@ smaller than 768px wide */
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 40%;
+    width: 25%;
     justify-content: space-around;
     transform: translateX(100%);
     transition: transform 0.5s ease-in;
@@ -637,7 +638,7 @@ smaller than 768px wide */
   }
   
   .main-image img {
-    width: 100%;
+    block-size: 30ch;
   }
 
   /* About page - remove images*/
