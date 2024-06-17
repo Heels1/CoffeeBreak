@@ -1,162 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <!-- Meta information -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="view-transition" content="same-origin" />
     <!-- External CSS links -->
     <link rel="stylesheet" href="./styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
-      <!-- Page title -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
     <title>Tui Café - Cafes</title>
-  </head>
-  <body>
+    <style>
+        #map {
+            height: 600px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
     <header class="header">
-      <!-- Header container with navigation and logo -->
-      <div class="container row">
-        <nav class="navbar">
-          <div class="logo">
-            <h4>Coffee Break</h4>
-          </div>
-          <!-- Navigation links -->
-          <ul class="nav-links">
-            <li><a class="nav-item" href="./homepage.html">Home</a></li>
-            <li><a class="nav-item" href="./about.html">About</a></li>
-            <li><a class="nav-item" href="#">cafes</a></li>
-            <li><a class="nav-item" href="./menu.html">Menu</a></li>
-            <li><a class="nav-item" href="./gallery.html">Gallery</a></li>
-          </ul>
-          <!-- Burger menu icon for mobile -->
-          <div class="burger">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-          </div>
-        </nav>
-      </div>
+        <!-- Header container with navigation and logo -->
+        <div class="container row">
+            <nav class="navbar">
+                <div class="logo">
+                    <h4>Coffee Break</h4>
+                </div>
+                <!-- Navigation links -->
+                <ul class="nav-links">
+                    <li><a class="nav-item" href="./homepage.html">Home</a></li>
+                    <li><a class="nav-item" href="./about.html">About</a></li>
+                    <li><a class="nav-item" href="#">cafes</a></li>
+                    <li><a class="nav-item" href="./gallery.html">Gallery</a></li>
+                </ul>
+                <!-- Burger menu icon for mobile -->
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </nav>
+        </div>
     </header>
     <section class="hero">
-      <!-- Main title section -->
-      <div class="container row mobile">
-        <h1 class="main-title">Cafes</h1>
-        <p class="main-sub-title">whakapā mai</p>
-        <!-- Cafe location map -->
-        <div class="cafe-location">
-          <iframe
-            class="map"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.739096229439!2d174.31273529999999!3d-35.708037499999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0b7ed8918ad62b%3A0x59fbe08246f89153!2s97%20Western%20Hills%20Drive%2C%20Kensington%2C%20Whang%C4%81rei%200112!5e0!3m2!1sen!2snz!4v1696593133296!5m2!1sen!2snz"
-            width="600"
-            height="450"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <!-- Main title section -->
+        <div class="container row mobile">
+            <h1 class="main-title">Cafes</h1>
+            <p class="main-sub-title">whakapā mai</p>
+            <!-- Cafe location map -->
+            <div class="cafe-location">
+                <div id="map"></div>
+            </div>
         </div>
-      </div>
     </section>
     <section class="form-container mobile">
-      <!-- Contact form section -->
-      <h1>CONTACT US</h1>
-      <p>Please drop us a line if you have any questions or suggestions</p>
-      <!-- Contact form elements -->
-      <form class="form">
-        <div class="form-row">
-          <div class="form-column">
-            <label for="name">Name</label>
-            <input
-              type="text"
-              id="name"
-              placeholder="Your name here"
-              autocomplete="name" />
-          </div>
-          <div class="form-column">
-            <label for="email">Email</label>
-            <input
-              type="email"
-              id="email"
-              placeholder="Your email here"
-              autocomplete="email" />
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-column">
-            <label for="subject">Subject</label>
-            <input type="text" id="subject" placeholder="Your subject here" />
-          </div>
-          <div class="form-column">
-            <label for="contact">Contact Number</label>
-            <input
-              type="tel"
-              id="contact"
-              placeholder="Your phone number here" />
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-column">
-            <label for="issue">Describe your issue</label>
-            <textarea
-              id="issue"
-              placeholder="Describe your issue in detail here"
-              rows="3"></textarea>
-          </div>
-        </div>
-        <button>Submit</button>
-      </form>
+        <!-- Contact form section -->
+        <h1>CONTACT US</h1>
+        <p>Please drop us a line if you have any questions or suggestions</p>
+        <!-- Contact form elements -->
+        <form class="form">
+            <div class="form-row">
+                <div class="form-column">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="Your name here" autocomplete="name" />
+                </div>
+                <div class="form-column">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Your email here" autocomplete="email" />
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-column">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" placeholder="Your subject here" />
+                </div>
+                <div class="form-column">
+                    <label for="contact">Contact Number</label>
+                    <input type="tel" id="contact" placeholder="Your phone number here" />
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-column">
+                    <label for="issue">Describe your issue</label>
+                    <textarea id="issue" placeholder="Describe your issue in detail here" rows="3"></textarea>
+                </div>
+            </div>
+            <button>Submit</button>
+        </form>
     </section>
     <!-- footer section -->
     <footer class="footer">
-      <div class="grid-container">
-        <div class="col-1">
-          <h3 class="footer-title">LINKS</h3>
-          <a href="./index.html">Home</a>
-          <a href="#">Contact Us</a>
-          <a href="./menu.html">Menu</a>
-          <a href="./gallery.html">Gallery</a>
+        <div class="grid-container">
+            <div class="col-1">
+                <h3 class="footer-title">LINKS</h3>
+                <a href="./index.html">Home</a>
+                <a href="#">Contact Us</a>
+                <a href="./menu.html">Menu</a>
+                <a href="./gallery.html">Gallery</a>
+            </div>
+            <div class="col-2">
+                <!-- Social media links and motto -->
+                <h3 class="footer-title">FOLLOW US</h3>
+                <div class="social-media">
+                    <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                    <div class="motto">
+                        <p>Whāngaihia to tinana ki te kai organic</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <!-- Contact information -->
+                <h3 class="footer-title">CONTACT US</h3>
+                <p>97 Western Hills Drive,</p>
+                <p>Kensington,</p>
+                <p>Whangarei 0112</p>
+                <br />
+                <p>Phone: 09 438 9563</p>
+                <p>Email: <a id="email-add" href="#">admin@coffeebreak.co.nz</a></p>
+            </div>
         </div>
-        <div class="col-2">
-          <!-- Social media links and motto -->
-          <h3 class="footer-title">FOLLOW US</h3>
-          <div class="social-media">
-            <a href="https://www.facebook.com" target="_blank"
-              ><i class="fa-brands fa-facebook"></i
-            ></a>
-            <a href="https://www.instagram.com" target="_blank"
-              ><i class="fa-brands fa-instagram"></i
-            ></a>
-            <a href="https://www.twitter.com" target="_blank"
-              ><i class="fa-brands fa-x-twitter"></i
-            ></a>
-            <div class="motto">
-              <p>Whāngaihia to tinana ki te kai organic</p>
-              </div>
-          </div>
+        <div class="copyRight">
+            <!-- Copyright information -->
+            <p>
+                <span>Copyright &#169; 2023 </span>CoffeeBreak Limited<span> All rights reserved.</span>
+            </p>
         </div>
-        <div class="col-3">
-          <!-- Contact information -->
-          <h3 class="footer-title">CONTACT US</h3>
-          <p>97 Western Hills Drive,</p>
-          <p>Kensington,</p>
-          <p>Whangarei 0112</p>
-          <br />
-          <p>Phone: 09 438 9563</p>
-          <p>Email: <a id="email-add" href="#">admin@tuicafe.co.nz</a></p>
-        </div>
-      </div>
-      <div class="copyRight">
-        <!-- Copyright information -->
-        <p>
-          <span>Copyright &#169; 2023 </span>Tui Café Limited<span>
-            All rights reserved.</span
-          >
-        </p>
-      </div>
     </footer>
-    <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaB_F1vp6UKCdHsrLASRaOWoSzOApyL2s&libraries=places"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const whangareiLat = -35.7251;  // Whangarei latitude
+            const whangareiLng = 174.3237; // Whangarei longitude
+            const map = new google.maps.Map(document.getElementById('map'), {
+                center: { lat: whangareiLat, lng: whangareiLng },
+                zoom: 13
+            });
+
+            const infoWindow = new google.maps.InfoWindow();
+            const service = new google.maps.places.PlacesService(map);
+
+            function createMarker(place) {
+                if (!place.geometry || !place.geometry.location) return;
+
+                const marker = new google.maps.Marker({
+                    map: map,
+                    position: place.geometry.location
+                });
+
+                google.maps.event.addListener(marker, 'click', () => {
+                    infoWindow.setContent(place.name || 'Unnamed Place');
+                    infoWindow.open(map, marker);
+                });
+            }
+
+            function fetchPlaces(lat, lng, keyword) {
+    const location = new google.maps.LatLng(lat, lng);
+    const request = {
+        location: location,
+        radius: '300000', // change radius 
+        keyword: keyword
+    };
+
+    service.nearbySearch(request, (results, status) => {
+        if (status === google.maps.places.PlacesServiceStatus.OK) {
+            results.forEach((place) => {
+                // Filter out supermarkets and specific places like Coffee News (NZ)
+                if (!place.types.includes('supermarket') && place.name !== 'Coffee News (NZ)') {
+                    createMarker(place);
+                }
+            });
+        } else {
+            console.error('Error fetching places:', status);
+        }
+    });
+}
+            // Search for cafes and coffee places
+            const keywords = ['Cafe', 'cafe', 'Coffee', 'coffee', 'innoNative Retail Store', 'streetwise Coffee', 'three sisters coffee van', 'columbus coffee', ' the bake house cafe', 'Café', 'dragonfruit cafe'];
+            keywords.forEach(keyword => {
+                fetchPlaces(whangareiLat, whangareiLng, keyword);
+            });
+        });
+    </script>
     <script defer src="./main.js"></script>
-  </body>
+</body>
 </html>
+
+
+
+
+
+
+
+

@@ -63,3 +63,7 @@ const navSlide = () => {
       prevEl: ".swiper-button-prev",
     },
   });
+  
+  
+  
+  
