@@ -363,8 +363,11 @@ to an X */
 .ourTeam-profile {
   font-size: 1rem;
   margin-top: 1.25rem;
-  text-align: justify;
   font-weight: 400;
+  margin: auto;
+}
+.ourTeam-portfolio{
+  margin-bottom: 10cap;
 }
 
 /* Contact Page */
